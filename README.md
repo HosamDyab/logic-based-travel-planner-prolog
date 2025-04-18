@@ -99,6 +99,8 @@ Visualizes the system’s **functional requirements** and actor interactions.
 - **Primary Use Cases**: **Enter Preferences**, **Request Travel Plan**, **Show Recommendations**, **Update Knowledge Base**.
 - **Extended Use Cases**: **Handling Invalid Input**, **Suggest Adjustments**.
 
+---
+
 ### Sequence Diagram
 
 Depicts the **dynamic interactions** over time.
@@ -114,6 +116,7 @@ Depicts the **dynamic interactions** over time.
 - **Actors**: **User**, **System**, **Budget System**, **Knowledge Base**.
 - **Flow**: Entering preferences, requesting plans, budget checking, and updates.
 - **Controls**: `Alt` for invalid budgets, `Loop` for recommendations.
+---
 
 ### Activity Diagram
 
