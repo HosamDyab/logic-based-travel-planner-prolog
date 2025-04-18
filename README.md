@@ -102,7 +102,13 @@ Visualizes the system’s **functional requirements** and actor interactions.
 ### Sequence Diagram
 
 Depicts the **dynamic interactions** over time.
+![Sequence Diagram](images/sequence_diagram_0.png)
 
+---
+
+**Detailed Sequence Diagram**
+
+Depicts the **dynamic interactions** over time.
 ![Sequence Diagram](images/sequence_diagram.png)
 
 - **Actors**: **User**, **System**, **Budget System**, **Knowledge Base**.
