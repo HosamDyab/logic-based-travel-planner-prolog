@@ -1,8 +1,8 @@
-% travel_planner_4.pl
+% travel_planner.pl
 % A Prolog-based travel planner for Cairo, Aswan, and PortSaid, generating trip plans
 % with enhanced recommendations, attraction linking, budget optimization, and clean formatting.
 
-:- module(travel_planner_4, [
+:- module(travel_planner, [
     plan_trip/8, % Keep exported if direct call needed
     start_planner/0, % Export the interactive starter
     submit_hotel_review/4,
