@@ -1,4 +1,6 @@
 % travel_planner.pl
+% Egyptian Travel Planner: Prolog-based expert system for generating personalized travel itineraries.
+% Features: hotel/transport/activity selection, budget optimization, user reviews, and hotel updates.
 % A Prolog-based travel planner for Cairo, Aswan, and PortSaid, generating trip plans
 % with enhanced recommendations, attraction linking, budget optimization, and clean formatting.
 
@@ -197,6 +199,8 @@ activity_attraction_link('Corniche Evening Walk', 'PortSaid Corniche').
 % ============================================================
 % Interactive Planner Start Predicate
 % ============================================================
+% start_planner/0
+% Launches the interactive CLI travel planner, prompting the user for all required inputs.
 start_planner :-
     write('--- Welcome to the Travel Planner ---'), nl,
     prompt_read_string('Enter your name (UserID): ', UserID),

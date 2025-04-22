@@ -1,10 +1,16 @@
-# Logic-based Travel Planner 🚀
+# 🏛️ Egyptian Travel Planner (Logic-based Travel Planner) 🚀
 
-![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)  
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![SWI-Prolog](https://img.shields.io/badge/SWI--Prolog-8.0+-orange.svg)](https://www.swi-prolog.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+![GitHub Issues](https://img.shields.io/github/issues/HosamDyab/logic-based-travel-planner-prolog-?color=orange)  
+![GitHub Last Commit](https://img.shields.io/github/last-commit/HosamDyab/logic-based-travel-planner-prolog-?color=green)  
 
-**Welcome to the Logic-based Travel Planner**, an innovative solution leveraging **Prolog** to revolutionize travel planning with personalized, budget-friendly itineraries. Developed by the *TravelLogic Crew* for the *Logic Programming Course* at **Modern University for Technology & Information**, this project showcases modern logic programming techniques applied to real-world challenges.
+A modern desktop application for planning your perfect Egyptian vacation. Using advanced AI techniques through Prolog, this app creates personalized travel itineraries based on your preferences.
+
+**Welcome to the Logic-based Travel Planner**, an innovative solution leveraging **Prolog** to revolutionize travel planning with personalized, budget-friendly itineraries. Developed by the *TravelLogic Crew* for the *Logic Programming Course* at **Modern University for Technology & Information**, this mid-term project showcases modern logic programming techniques applied to real-world challenges.
+
+![Egyptian Travel Planner Screenshot](images/GUI.png) 
 
 ---
 
@@ -12,19 +18,40 @@
 
 The **Logic-based Travel Planner** automates travel planning by integrating **budget estimation**, **hotel recommendations**, **destination insights**, **transportation assistance**, and **activity discovery**. Built with **Prolog's declarative programming**, it offers a scalable, rule-based system that adapts to user preferences and constraints, transforming a traditionally tedious process into an efficient experience.
 
+## ✨ Features
+
+- 🗺️ **Smart Trip Planning**: Generate customized travel plans for major Egyptian cities
+- 🏨 **Hotel Recommendations**: Get hotel suggestions based on your budget and preferences
+- 🚗 **Transportation Options**: Find the best ways to get around at your destination
+- 🏛️ **Activity Scheduling**: Discover the best attractions with optimized daily itineraries
+- 💰 **Budget Management**: Keep your travel expenses within your specified budget
+- 📝 **Hotel Reviews**: Submit and view hotel reviews to make informed decisions
+- 💾 **Plan Saving**: Save and print your travel plans for offline reference
+
 ---
 
 ## 📋 Table of Contents
 
 - [Problem Definition](#-problem-definition)
 - [Project Description](#-project-description)
-- [System Components](#-system-components)
-- [Technical Features](#-technical-features)
+  - [Introduction](#-introduction)
+  - [Technical Approach](#-technical-approach)
+    - [System Components](#-system-components)
+    - [Technical Features](#-technical-features)
+    - [Design Principles](#-design-principles)
 - [Installation](#-installation)
 - [How to Use](#-how-to-use)
-- [Keyboard Shortcuts](#-keyboard-shortcuts)
+- [Diagrams](#-diagrams)
+  - [Use Case Diagram](#-use-case-diagram)
+  - [Sequence Diagram](#-sequence-diagram)
+  - [Activity Diagram](#-activity-diagram)
 - [Technical Details](#-technical-details)
+- [Prolog Implementation](#-prolog-implementation)
+- [Keyboard Shortcuts](#-keyboard-shortcuts)
+- [Requirements](#-requirements)
+- [Conclusion](#-conclusion)
 - [References](#-references)
+- [Contributing](#-contributing)
 - [License](#-license)
 
 ---
@@ -37,14 +64,18 @@ Before **logic-based systems** like *Prolog*, travel planning was a daunting tas
 
 ## 📝 Project Description
 
-The **Logic-based Travel Planner** redefines travel planning with **customized itineraries** powered by **Prolog**. It calculates **budgets**, recommends **hotels**, and provides **destination insights**, all while ensuring a *seamless* user experience through a Python GUI interface.
+### Introduction
 
----
+The **Logic-based Travel Planner** redefines travel planning with **customized itineraries** powered by **Prolog**. Designed for the *Logic Programming Course*, it calculates **budgets**, recommends **hotels**, and provides **destination insights**, all while ensuring a *seamless* user experience. Future iterations will introduce a **GUI** and **real-time data integration**, aligning with modern travel tech trends.
 
-## ✨ System Components
+### Technical Approach
+
+A **rule-based expert system** built with **Prolog**, this project tackles the *complexity* of travel planning with precision and scalability.
+
+#### System Components
 
 - **Knowledge Base**:  
-  - `city/1`: e.g., `cairo`, `aswan`.  
+  - `city/1`: e.g., `cairo`, `aswan`, `PortSaid`.  
   - `attraction/2`: e.g., `attraction(cairo, pyramids)`.  
   - `hotel/4`: e.g., `hotel(cairo, 'four_seasons', 2000, 4.8)`.  
   - `transport/3`: e.g., `transport(cairo, car, 500)`.  
@@ -57,20 +88,26 @@ The **Logic-based Travel Planner** redefines travel planning with **customized i
 - **Interface Layer**:  
   - Modern **GUI** built with Python and Tkinter.
 
----
-
-## 🚀 Technical Features
+#### Technical Features
 
 1. **Budget Estimation**: Aggregates costs (hotel, transport, food, activities).  
-2. **Hotel Recommendations**: Filters hotels by budget and rating.
-3. **Destination Information**: Provides details about landmarks and cultural sites.
-4. **Transportation Assistance**: Matches transportation options to cities with cost optimization.
-5. **Personalized Recommendations**: Creates tailored travel plans.
-6. **Activity Discovery**: Maps activities to user interests.
+   - Example: `2000 * 3 + 500 + (300 * 3) = 6800 EGP` for a 3-day Cairo trip.
+2. **Hotel Recommendations**: Filters `hotel/4` by budget and `Rating` (e.g., ≥ 4.2).
+3. **Destination Information**: Queries `attraction/2` for landmarks and cultural sites.
+4. **Transportation Assistance**: Matches `transport/3` to cities with cost optimization.
+5. **Personalized Recommendations**: Uses `personalized_recommendation/4` for tailored plans.
+6. **Activity Discovery**: Maps `activity/3` to user interests.
+
+#### Design Principles
+
+- **Modularity**: Independent facts and rules for easy updates.
+- **Efficiency**: *Polynomial-time* performance via Prolog backtracking.
+- **Scalability**: Ready for *real-time data* and *multi-user support*.
+- **Reliability**: Robust input validation and constraint checking.
 
 ---
 
-## 📥 Installation
+## 🚀 Installation
 
 ### Prerequisites
 
@@ -125,14 +162,68 @@ The **Logic-based Travel Planner** redefines travel planning with **customized i
    - Daily activities with times and costs
    - Total budget breakdown
 
-4. Save or print your plan using the buttons or keyboard shortcuts
+4. Save or print your plan using the buttons or keyboard shortcuts (Ctrl+S to save, Ctrl+P to print)
 
 ### Managing Hotels
 
 Use the "Hotel Management" tab to:
 
-- **Submit Reviews**: Share your experience at hotels with ratings and comments
+- **Submit Reviews**: Share your experience at Egyptian hotels with ratings and comments
 - **Update Hotel Information**: Update hotel data such as names and prices (admin feature)
+
+---
+
+## 📊 Diagrams
+
+### Use Case Diagram
+
+Visualizes the system's **functional requirements** and actor interactions.
+
+![Use Case Diagram](images/use_case_diagram.png)
+
+- **Actors**: **User**, **System**, **Knowledge Base**.
+- **Primary Use Cases**: **Enter Preferences**, **Request Travel Plan**, **Show Recommendations**, **Update Knowledge Base**.
+- **Extended Use Cases**: **Handling Invalid Input**, **Suggest Adjustments**.
+
+---
+
+### Sequence Diagram
+
+Depicts the **dynamic interactions** over time.
+![Sequence Diagram](images/sequence_diagram_0.png)
+
+---
+
+**Detailed Sequence Diagram**
+
+Depicts the **dynamic interactions** over time.
+![Sequence Diagram](images/sequence_diagram.png)
+
+- **Actors**: **User**, **System**, **Budget System**, **Knowledge Base**.
+- **Flow**: Entering preferences, requesting plans, budget checking, and updates.
+- **Controls**: `Alt` for invalid budgets, `Loop` for recommendations.
+---
+
+### Activity Diagram
+
+Models the **procedural workflow**.
+
+![Activity Diagram](images/activity_diagram.png)
+
+- **Flow**: From entering preferences to displaying recommendations, with budget validation and knowledge base updates.
+- **Controls**: Decision points (e.g., "Budget valid?"), loops (e.g., query iterations).
+
+---
+
+## 🧠 Technical Details
+
+The Egyptian Travel Planner uses a hybrid architecture:
+
+- **Frontend**: Python with Tkinter for the graphical user interface
+- **Backend**: SWI-Prolog for the logical reasoning and travel planning algorithms
+- **Integration**: PySwip library to connect Python with Prolog
+
+The application uses declarative logic programming to match travel preferences with available options and constraints.
 
 ---
 
@@ -150,32 +241,36 @@ Use the "Hotel Management" tab to:
 
 ---
 
-## 🧠 Technical Details
+## 📋 Requirements
 
-The Logic-based Travel Planner uses a hybrid architecture:
+See [requirements.txt](requirements.txt) for a complete list of dependencies.
 
-- **Frontend**: Python with Tkinter for the graphical user interface
-- **Backend**: SWI-Prolog for the logical reasoning and travel planning algorithms
-- **Integration**: PySwip library to connect Python with Prolog
+---
 
-The application uses declarative logic programming to match travel preferences with available options and constraints.
+## 🎯 Conclusion
+The Logic-based Travel Planner is a pioneering effort in logic programming, delivering a scalable, user-centric system. This project showcases Prolog's power in handling travel planning complexities, with diagrams illustrating its adaptability. Future plans include enhanced GUI features, real-time data, and multi-user support, positioning it as a leader in intelligent travel tech.
 
 ---
 
 ## 📚 References
-
-* Booch, G., Rumbaugh, J., & Jacobson, I. (2005). The Unified Modeling Language User Guide (2nd ed.). Addison-Wesley.
-* Bratko, I. (2012). Prolog Programming for Artificial Intelligence (4th ed.). Addison-Wesley.
-* Object Management Group (OMG). (2023). UML Specification, Version 2.5.1\. <https://www.omg.org/spec/UML/2.5.1>
-* SWI-Prolog. (2023). Documentation. <https://www.swi-prolog.org/>
-* Sommerville, I. (2015). Software Engineering (10th ed.). Pearson.
+- Booch, G., Rumbaugh, J., & Jacobson, I. (2005). The Unified Modeling Language User Guide (2nd ed.). Addison-Wesley.
+- Bratko, I. (2012). Prolog Programming for Artificial Intelligence (4th ed.). Addison-Wesley.
+- Object Management Group (OMG). (2023). UML Specification, Version 2.5.1. https://www.omg.org/spec/UML/2.5.1
+- SWI-Prolog. (2023). Documentation. https://www.swi-prolog.org/
+- Sommerville, I. (2015). Software Engineering (10th ed.). Pearson.
 
 ---
 
-## 📜 License
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+---
+
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
+
 
 *Happy Travels!* 🐪✨

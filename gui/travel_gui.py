@@ -48,6 +48,10 @@ prolog = None
 
 # --- Initialization ---
 def initialize_prolog():
+    """Initializes the global Prolog instance and consults the main Prolog file.
+    Returns:
+        bool: True if Prolog is successfully initialized and consulted, False otherwise.
+    """
     global prolog
     try:
         prolog = Prolog()
@@ -62,7 +66,12 @@ def initialize_prolog():
 
 # --- Helper to decode bytes from Prolog results ---
 def decode_bytes_recursive(item):
-    """Recursively decodes bytes to strings in lists and dictionaries."""
+    """Recursively decodes bytes to strings in lists and dictionaries.
+    Args:
+        item: The item to decode (can be bytes, dict, list, or other types).
+    Returns:
+        The decoded item with all bytes converted to strings.
+    """
     if isinstance(item, bytes):
         try:
             return item.decode('utf-8')
@@ -77,7 +86,12 @@ def decode_bytes_recursive(item):
 
 # --- Helper to run Prolog queries and handle results/errors ---
 def run_prolog_query(query_string):
-    """Runs a query, decodes results, handles errors."""
+    """Runs a Prolog query, decodes results, and handles errors.
+    Args:
+        query_string (str): The Prolog query to execute.
+    Returns:
+        dict: Decoded result from Prolog or an error message.
+    """
     if not prolog:
         messagebox.showerror("Error", "Prolog engine not initialized.")
         return None
@@ -935,4 +949,4 @@ def finish_setup():
 root.after(2000, finish_setup)
 
 # --- Run the Application ---
-root.mainloop() 
+root.mainloop()
