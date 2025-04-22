@@ -1,0 +1,15 @@
+name: Prolog Syntax Check
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install SWI-Prolog
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y swi-prolog
+    - name: Check Prolog Syntax
+      run: swipl -g "consult('code/travel_planner.pl'), halt(0)" -t "halt(1)"
