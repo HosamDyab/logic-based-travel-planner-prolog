@@ -1,4 +1,4 @@
-# 🏛Egyptian Travel Planner (Logic-based Travel Planner) 
+# Egyptian Travel Planner (Logic-based Travel Planner) 
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![SWI-Prolog](https://img.shields.io/badge/SWI--Prolog-8.0+-orange.svg)](https://www.swi-prolog.org/)
