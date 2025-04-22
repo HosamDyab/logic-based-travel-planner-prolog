@@ -1,0 +1,8 @@
+# Egyptian Travel Planner Requirements
+# Core dependencies
+pillow>=9.0.0        # Image processing
+pyswip>=0.2.10       # Python-Prolog bridge
+tkinter              # GUI framework (usually included with Python)
+
+# Optional: for improved UI features
+ttkthemes>=3.2.0     # Enhanced themes for Tkinter 
