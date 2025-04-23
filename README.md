@@ -142,7 +142,10 @@ A **rule-based expert system** built with **Prolog**, this project tackles the *
 ---
 
 ## 📖 How to Use
-![Travel Planner video](Video/Prolog Rules.mp4) 
+
+
+https://github.com/user-attachments/assets/5136ff88-eb35-47ee-9cf1-1804eb728a4e
+
 
 
 ### Planning a Trip
