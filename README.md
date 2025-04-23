@@ -141,7 +141,7 @@ A **rule-based expert system** built with **Prolog**, this project tackles the *
 
 ---
 
-## 📖 How to Use
+## 📖 How to Use in SWI-Prolog
 
 
 https://github.com/user-attachments/assets/5136ff88-eb35-47ee-9cf1-1804eb728a4e
