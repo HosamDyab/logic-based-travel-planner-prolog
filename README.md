@@ -8,7 +8,7 @@
 
 A modern desktop application for planning your perfect Egyptian vacation. Using advanced AI techniques through Prolog, this app creates personalized travel itineraries based on your preferences.
 
-**Welcome to the Logic-based Travel Planner**, an innovative solution leveraging **Prolog** to revolutionize travel planning with personalized, budget-friendly itineraries. Developed by the *TravelLogic Crew* for the *Logic Programming Course* at **Modern University for Technology & Information**, this mid-term project showcases modern logic programming techniques applied to real-world challenges.
+**Welcome to the Logic-based Travel Planner**, an innovative solution leveraging **Prolog** to revolutionize travel planning with personalized, budget-friendly itineraries. Developed by the *TravelLogic Crew* for the *Logic Programming Course* at **Modern University for Technology & Information**, this project showcases modern logic programming techniques applied to real-world challenges.
 
 ![Egyptian Travel Planner Screenshot](images/GUI.png) 
 
